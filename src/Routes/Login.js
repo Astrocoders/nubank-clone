@@ -2,13 +2,13 @@ import React, {
   Component
 } from 'react';
 import {
-  Text, 
-  View, 
-  ScrollView, 
-  Animated, 
-  TouchableOpacity, 
-  Alert, 
-  Image, 
+  Text,
+  View,
+  ScrollView,
+  Animated,
+  TouchableOpacity,
+  Alert,
+  Image,
   DeviceEventEmitter,
   StyleSheet,
 } from 'react-native';
@@ -25,7 +25,6 @@ import ButtonRounded from '~/Components/ButtonRounded';
 // Services and utils
 import { timeout } from '~/Services/Timers';
 import AppEventEmitter from '~/Services/AppEventEmitter';
-import SetupOneSignal from '~/Services/SetupOneSignal';
 
 // Containers
 import RedirUserContainer from '~/Containers/redir_user';
@@ -83,8 +82,6 @@ class Login extends Component {
         ]);
         return;
       }
-
-      setTimeout(SetupOneSignal, 2000);
     });
   }
 

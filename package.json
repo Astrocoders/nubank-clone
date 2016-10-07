@@ -31,7 +31,6 @@
     "react-native-loading-spinner-overlay": "^0.3.0",
     "react-native-meteor": "^1.0.0-rc9",
     "react-native-navbar": "^1.5.0",
-    "react-native-onesignal": "^1.2.1",
     "react-native-router-flux": "^3.35.0",
     "react-native-simple-warn": "^2.0.0",
     "react-native-spinkit": "^0.1.3",
