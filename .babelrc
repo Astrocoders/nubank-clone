@@ -1,0 +1,14 @@
+{
+  "presets": ["react-native"],
+  "sourceMaps": true,
+  "env": {
+    "test": {
+      "plugins": ["babel-root-import"]
+    }
+  },
+  "plugins": [
+    ["babel-root-import", {
+      "rootPathSuffix": "src/"
+    }], "transform-decorators-legacy"
+  ]
+}
