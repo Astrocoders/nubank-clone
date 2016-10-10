@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "node_modules/react-native/packager/packager.sh",
+    "start": "node node_modules/react-native/local-cli/cli.js start",
     "android": "react-native run-android",
     "ios": "cd ios && open NuBankClone.xcodeproj",
     "reverse-ports": "adb reverse tcp:8081 tcp:8081 && adb reverse tcp:3000 tcp:3000",
@@ -34,6 +34,7 @@
     "react-native-router-flux": "^3.35.0",
     "react-native-simple-warn": "^2.0.0",
     "react-native-spinkit": "^0.1.3",
+    "react-native-swiper": "^1.4.11",
     "react-native-vector-icons": "^2.1.0",
     "redux": "^3.6.0",
     "rn-meteor-containerize": "^1.0.1"
