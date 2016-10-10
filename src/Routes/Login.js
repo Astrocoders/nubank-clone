@@ -9,7 +9,7 @@ import {
   TouchableOpacity,
   Alert,
   Image,
-  DeviceEventEmitter,
+  Keyboard,
   StyleSheet,
 } from 'react-native';
 import Spinner from 'react-native-loading-spinner-overlay';
@@ -44,9 +44,9 @@ class Login extends Component {
   }
 
   componentWillMount () {
-    this.onKeyboardShow = DeviceEventEmitter
+    this.onKeyboardShow = Keyboard
       .addListener('keyboardWillShow', this._keyboardWillShow.bind(this));
-    this.onKeyboardHide = DeviceEventEmitter
+    this.onKeyboardHide = Keyboard
       .addListener('keyboardWillHide', this._keyboardWillHide.bind(this));
   }
 
