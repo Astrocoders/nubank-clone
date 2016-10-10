@@ -11,5 +11,6 @@
     "flow-vars/define-flow-type": 1,
     "flow-vars/use-flow-type": 1,
     "react/jsx-filename-extension": 0,
+    "semi": ["error", "never"],
   }
 }
