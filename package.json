@@ -5,19 +5,18 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "android": "react-native run-android",
-    "ios": "cd ios && open NuBankClone.xcodeproj",
-    "reverse-ports": "adb reverse tcp:8081 tcp:8081 && adb reverse tcp:3000 tcp:3000",
+    "ios": "cd ios && open astroapp.xcworkspace",
     "warning-clean-up": "echo '\\033[1;33m Please, uninstall the app from your phone or destroy the emulator\n\\033[0m'",
     "reinstall-npm-modules": "npm cache clean && rm -rf node_modules && npm install",
-    "gradle-clean": "cd android && ./gradlew clean",
-    "ios-clean": "cd ios && rm -rf build",
-    "clear-watchman": "watchman watch-del-all",
-    "hyper-clean": "npm run warning-clean-up && npm run clear-watchman && npm run ios-clean && rm -rf $TMPDIR/react-* && npm run reinstall-npm-modules && npm run gradle-clean && rnpm link",
+    "ios:clean": "cd ios && rm -rf build",
+    "watchman:clear": "watchman watch-del-all",
+    "hyper-clean": "npm run warning-clean-up && npm run watchman:clear && npm run ios:clean && rm -rf $TMPDIR/react-* && npm run reinstall-npm-modules && npm run android:gradle-clean && react-native link",
+    "android:gradle-clean": "cd android && ./gradlew clean",
+    "android:reverse-ports": "adb reverse tcp:8081 tcp:8081 && adb reverse tcp:3000 tcp:3000",
+    "android:release:generate": "cd android && ./gradlew assembleRelease",
+    "android:release:install": "cd android && adb install app/build/outputs/apk/app-release.apk",
     "test": "BABEL_ENV=test mocha src/**/tests/*.js --require react-native-mock/mock.js --compilers js:babel-core/register",
-    "test-watch": "npm run test -- --watch --watch-extensions js --growl",
-    "shake": "$ANDROID_HOME/platform-tools/adb devices | grep '\\t' | awk '{print $1}' | sed 's/\\s//g' | xargs -I {} $ANDROID_HOME/platform-tools/adb -s {} shell input keyevent 82",
-    "release:generate": "cd android && ./gradlew assembleRelease",
-    "release:install": "cd android && adb install app/build/outputs/apk/app-release.apk"
+    "test-watch": "npm run test -- --watch --watch-extensions js --growl"
   },
   "dependencies": {
     "color": "^0.11.3",
