@@ -1,9 +1,4 @@
-'use strict';
-
-import React, {
-  Component,
-  PropTypes,
-} from 'react';
+import React, { Component, PropTypes } from 'react'
 import {
   Text,
   View,
@@ -11,18 +6,15 @@ import {
   TouchableWithoutFeedback,
   ScrollView,
   Alert,
-} from "react-native";
-import Meteor from 'react-native-meteor';
-import Moment from 'moment';
-import { Actions } from 'react-native-router-flux';
-
-// Components
-import AppEventEmitter from '~/Services/AppEventEmitter';
+} from 'react-native'
+import Meteor from 'react-native-meteor'
+import Moment from 'moment'
+import { Actions } from 'react-native-router-flux'
 
 // Styles
-import sidebar from '~/Styles/sidebar';
+import sidebar from '~/Styles/sidebar'
 
-class Sidebar extends Component {
+export default class Sidebar extends Component {
   static contextTypes = {
     drawer: PropTypes.object,
   };
@@ -68,5 +60,3 @@ class Sidebar extends Component {
     );
   }
 }
-
-export default Sidebar;

@@ -8,6 +8,6 @@ BackAndroid.addEventListener('hardwareBackPress', () => {
   return true
 })
 
-const NuBankClone = () => <AppRootRouter />
+const NuBankClone = () => (<AppRootRouter />)
 
 AppRegistry.registerComponent('NuBankClone', () => NuBankClone)

@@ -1,13 +1,11 @@
-'use strict';
-
-import React, {Component} from "react";
-import {View, TextInput} from "react-native";
-import _ from 'lodash';
+import React, { Component } from 'react'
+import {View, TextInput} from 'react-native'
+import _ from 'lodash'
 
 // Styles
-import appStyles from '~/Styles/app';
+import appStyles from '~/Styles/app'
 
-class TextInputApp extends Component {
+export default class TextInputApp extends Component {
   render() {
     return (
       <View style={this.props.hideBottomBorder ?
@@ -20,5 +18,3 @@ class TextInputApp extends Component {
     );
   }
 }
-
-export default TextInputApp;

@@ -1,2 +1,2 @@
-export const timeout = setTimeout;
-export const interval = setInterval;
+export const timeout = setTimeout
+export const interval = setInterval

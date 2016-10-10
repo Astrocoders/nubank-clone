@@ -1,11 +1,9 @@
-'use strict';
-
-import React from 'react';
-import {View, Text} from 'react-native';
-import Spinner from 'react-native-spinkit';
+import React from 'react'
+import {View, Text} from 'react-native'
+import Spinner from 'react-native-spinkit'
 
 // Styles
-import styles from '../Styles/loader';
+import styles from '~/Styles/loader'
 
 const Loader = () => (
   <View style={styles.main}>
@@ -17,4 +15,4 @@ const Loader = () => (
   </View>
 );
 
-export default Loader;
+export default Loader

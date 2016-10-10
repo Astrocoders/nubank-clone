@@ -1,17 +1,10 @@
-import React, {Component} from 'react';
-import {
-  Navigator,
-} from 'react-native';
-import {
-  Actions,
-  Router,
-  Scene,
-} from 'react-native-router-flux';
+// Modules
+import React from 'react';
+import { Actions, Scene } from 'react-native-router-flux'
 
-import Login from './Routes/Login';
-import Register from './Routes/Register';
-import ForgotPassword from './Routes/ForgotPassword';
-import FullLoader from './Components/FullLoader';
+// Components
+import Login from '~/Scenes/Login'
+import FullLoader from '~/Components/FullLoader'
 
 export default Actions.create(
   <Scene key="root">
@@ -25,16 +18,6 @@ export default Actions.create(
       key="login"
       wrapRouter={false}
       component={Login}
-    />
-    <Scene
-      key="register"
-      wrapRouter={false}
-      component={Register}
-    />
-    <Scene
-      key="forgotPassword"
-      wrapRouter={false}
-      component={ForgotPassword}
     />
   </Scene>
 );

@@ -1,15 +1,13 @@
-'use strict';
-
-import React from 'react';
-import {View, TextInput, DeviceEventEmitter} from 'react-native';
-import Icon from 'react-native-vector-icons/Ionicons';
+import React from 'react'
+import { View, TextInput } from 'react-native'
+import Icon from 'react-native-vector-icons/Ionicons'
 import _ from 'lodash';
 
 // Styles
-import iconInputStyles from '~/Styles/iconInput';
-import appStyles from '~/Styles/app';
-import passwordInputStyles from '~/Styles/passwordInput';
-import {brandSecondary as secondary, dark, light} from '~/Styles/colors';
+import iconInputStyles from '~/Styles/iconInput'
+import appStyles from '~/Styles/app'
+import passwordInputStyles from '~/Styles/passwordInput'
+import {brandSecondary as secondary, dark, light} from '~/Styles/colors'
 
 class PasswordInput extends React.Component {
   constructor(props){

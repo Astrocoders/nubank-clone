@@ -57,6 +57,7 @@ export default StyleSheet.create({
   },
   inputs: {
     borderBottomColor: '#333',
+    height: 50,
   },
   btn: {
     backgroundColor: 'transparent',

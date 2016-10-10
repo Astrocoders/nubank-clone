@@ -33,7 +33,7 @@ export default StyleSheet.create({
     textAlign: 'left',
     alignSelf: 'center',
     width: widthInput,
-    height: 50,
+    height: 29,
   },
   row: {
     flexDirection: 'row'
