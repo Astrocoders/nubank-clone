@@ -14,5 +14,8 @@
     "semi": [1, "never"],
     "space-before-blocks": 0,
     "global-require": 0,
+    "import/no-unresolved": [2, { "ignore": ["^[~]"] }],
+    "import/extensions": 0,
+    "object-curly-spacing": 0,
   }
 }
