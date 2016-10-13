@@ -12,5 +12,7 @@
     "flow-vars/use-flow-type": 1,
     "react/jsx-filename-extension": 0,
     "semi": [1, "never"],
+    "space-before-blocks": 0,
+    "global-require": 0,
   }
 }
