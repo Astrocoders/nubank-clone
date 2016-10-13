@@ -28,6 +28,7 @@
     "react-native": "^0.34.1",
     "react-native-drawer": "^2.3.0",
     "react-native-keyboard-aware-scroll-view": "^0.2.1",
+    "react-native-linear-gradient": "^1.5.13",
     "react-native-loading-spinner-overlay": "^0.3.0",
     "react-native-meteor": "^1.0.1",
     "react-native-navbar": "^1.5.4",
