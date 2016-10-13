@@ -6,7 +6,7 @@ function composer(props, onData){
   const loggingIn = Meteor.loggingIn();
   const user = Meteor.user();
   if(!loggingIn && !user){
-    Actions.login({type: 'replace'});
+    Actions.intro({type: 'replace'});
 
     return;
   }
