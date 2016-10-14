@@ -34,7 +34,7 @@ function composer(props, onData){
     if(storedUser){
       Actions.dashboard({type: 'replace'});
     } else {
-      Actions.login({type: 'replace'});
+      Actions.intro({type: 'replace'});
     }
   });
 }
