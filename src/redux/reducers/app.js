@@ -1,4 +1,6 @@
-export default function app(state = {}, action = {}){
+export default function app(state = {
+  isLoginModalActive: false,
+}, action = {}){
   switch (action.type){
     case 'app/TOGGLE_LOGIN_MODAL':
       return {
