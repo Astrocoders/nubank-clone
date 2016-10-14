@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "android": "react-native run-android",
-    "ios": "cd ios && open astroapp.xcworkspace",
+    "ios": "cd ios && open NuBankClone.xcodeproj",
     "warning-clean-up": "echo '\\033[1;33m Please, uninstall the app from your phone or destroy the emulator\n\\033[0m'",
     "reinstall-npm-modules": "npm cache clean && rm -rf node_modules && npm install",
     "ios:clean": "cd ios && rm -rf build",
