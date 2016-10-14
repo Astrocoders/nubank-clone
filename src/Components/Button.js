@@ -5,6 +5,7 @@ import {
   Text,
   TouchableOpacity,
   StyleSheet,
+  View,
 } from 'react-native'
 
 const styles = StyleSheet.create({
@@ -51,9 +52,8 @@ export default function Button({ style, textStyle, transparent, ...props }){
 }
 
 Button.propTypes = {
-  style: TouchableOpacity.propTypes.style,
-  textStyle: Text.propTypes.style,
+  ...TouchableOpacity.propTypes,
+  textStyle: View.propTypes.style,
   transparent: PropTypes.bool,
   blueBorder: PropTypes.bool,
-  children: Text.propTypes.children,
 }
