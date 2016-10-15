@@ -5,25 +5,31 @@ import {
   Text,
   TouchableOpacity,
   Dimensions,
+  TextInput,
 } from 'react-native'
+
+import {
+  TextInputMask,
+} from 'react-native-masked-text'
 
 import {
   connect,
 } from 'react-redux'
 
-import t, {
-  struct,
-} from 'tcomb-form-native'
-
 // Components
 import Button from '~/Components/Button'
 
-const { Form } = t.form
-
-const LoginSchema = struct({
-  login: t.String,
-  password: t.String,
-})
+const formStyles = {
+  input: {
+    borderWidth: 1.2,
+    borderRadius: 0,
+    borderColor: 'rgba(101,24,110, 0.5)',
+    paddingVertical: 10,
+    color: '#65186E',
+    paddingHorizontal: 15,
+    fontSize: 16,
+  },
+}
 
 const { height } = Dimensions.get('window')
 
@@ -88,8 +94,23 @@ function LoginModal({ isVisible, app }){
             </View>
 
             <View style={{paddingTop: 20}}>
-              <Form
-                type={LoginSchema}
+              <TextInputMask
+                placeholder="CPF"
+                placeholderTextColor="#bbb"
+                underlineColorAndroid="transparent"
+                returnKeyType="next"
+                style={formStyles.input}
+                type="cpf"
+                maxLength={14}
+              />
+              <TextInput
+                placeholder="Senha da sua conta"
+                placeholderTextColor="#bbb"
+                underlineColorAndroid="transparent"
+                style={[formStyles.input, {
+                  marginTop: -1,
+                }]}
+                secureTextEntry
               />
             </View>
           </View>
@@ -102,7 +123,13 @@ function LoginModal({ isVisible, app }){
               alignItems: 'flex-end',
             }}
           >
-            <Button transparent blueBorder>
+            <Button
+              style={{
+                paddingHorizontal: 100,
+              }}
+              transparent
+              blueBorder
+            >
               CONFIRMAR
             </Button>
           </View>
