@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
     borderRadius: 3,
   },
   buttonText: {
-    color: '#65186E',
+    color: '#6A296C',
   },
   buttonTransparent: {
     backgroundColor: 'transparent',
