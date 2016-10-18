@@ -8,7 +8,6 @@ import {
   TouchableOpacity,
 } from 'react-native'
 /* eslint-disable import/no-unresolved, import/extensions */
-import LinearGradient from 'react-native-linear-gradient'
 import {
   connect,
 } from 'react-redux'
@@ -47,10 +46,13 @@ const styles = StyleSheet.create({
 
 function SlideOne({ app }){
   return (
-    <LinearGradient
-      style={styles.wrapper}
-      locations={[0, 0.2, 0.6, 0.9]}
-      colors={['#003941', '#125C63', '#21696D', '#F7E5B5']}
+    <Image
+      source={require('~/img/intro/sunrise.jpg')}
+      resizeMode="cover"
+      style={{
+        width: null,
+        height: null,
+      }}
     >
       <View style={{ height: height * 0.5, alignItems: 'center', justifyContent: 'space-between' }}>
         <Text style={[styles.text, {fontSize: 27, paddingHorizontal: 40, marginTop: 40}]}>
@@ -127,7 +129,7 @@ function SlideOne({ app }){
           </View>
         </View>
       </View>
-    </LinearGradient>
+    </Image>
   )
 }
 
